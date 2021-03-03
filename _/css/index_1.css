@@ -1,0 +1,21 @@
+input:focus {outline: none;}
+
+        .box-phone {
+            display: flex;
+            padding: 2px;
+            border: 1px solid #555;
+            width: 220px;
+        }
+        .box-phone__code {
+            display: flex;
+            padding: 0 4px;
+        }
+        .box-phone__country {
+             padding: 0 5px;
+        }
+       
+        .box-phone__input {
+            border: 0;
+            width: 100%;     
+        }
+        

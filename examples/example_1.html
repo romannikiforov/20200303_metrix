@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Example 1</title>
+    <link rel="stylesheet" href="../_/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="header-top bg-info text-white py-3">
+        <h1 class="text-center">Welcome</h1>
+      </header>
+      <div class="container box-content py-3">
+        <article>
+          <h2>Article 1</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Accusantium amet culpa libero nemo quam recusandae repellendus. Amet
+            cum laudantium minus nulla quisquam quos, repudiandae unde
+            voluptate? Ab ad aliquid amet atque autem blanditiis cum, cupiditate
+            deleniti dicta, eius explicabo facere illo molestias natus nesciunt
+            nihil nulla numquam obcaecati odio optio placeat qui quod recusandae
+            sint tempora tempore tenetur unde vel veniam voluptates? Accusantium
+            aliquam cum est, expedita iure laborum libero magni nostrum odit
+            officiis porro quam, quasi sed. Earum ipsa laborum minima mollitia
+            officiis. Alias amet aspernatur eius fugiat maiores nesciunt
+            quisquam sed, sit! Adipisci atque in iure repellat vel!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Accusantium amet culpa libero nemo quam recusandae repellendus. Amet
+            cum laudantium minus nulla quisquam quos, repudiandae unde
+            voluptate? Ab ad aliquid amet atque autem blanditiis cum, cupiditate
+            deleniti dicta, eius explicabo facere illo molestias natus nesciunt
+            nihil nulla numquam obcaecati odio optio placeat qui quod recusandae
+            sint tempora tempore tenetur unde vel veniam voluptates? Accusantium
+            aliquam cum est, expedita iure laborum libero magni nostrum odit
+            officiis porro quam, quasi sed. Earum ipsa laborum minima mollitia
+            officiis. Alias amet aspernatur eius fugiat maiores nesciunt
+            quisquam sed, sit! Adipisci atque in iure repellat vel!
+          </p>
+        </article>
+        <article class="mb-5">
+          <h2>Article 2</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Accusantium amet culpa libero nemo quam recusandae repellendus. Amet
+            cum laudantium minus nulla quisquam quos, repudiandae unde
+            voluptate? Ab ad aliquid amet atque autem blanditiis cum, cupiditate
+            deleniti dicta, eius explicabo facere illo molestias natus nesciunt
+            nihil nulla numquam obcaecati odio optio placeat qui quod recusandae
+            sint tempora tempore tenetur unde vel veniam voluptates? Accusantium
+            aliquam cum est, expedita iure laborum libero magni nostrum odit
+            officiis porro quam, quasi sed. Earum ipsa laborum minima mollitia
+            officiis. Alias amet aspernatur eius fugiat maiores nesciunt
+            quisquam sed, sit! Adipisci atque in iure repellat vel!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Accusantium amet culpa libero nemo quam recusandae repellendus. Amet
+            cum laudantium minus nulla quisquam quos, repudiandae unde
+            voluptate? Ab ad aliquid amet atque autem blanditiis cum, cupiditate
+            deleniti dicta, eius explicabo facere illo molestias natus nesciunt
+            nihil nulla numquam obcaecati odio optio placeat qui quod recusandae
+            sint tempora tempore tenetur unde vel veniam voluptates? Accusantium
+            aliquam cum est, expedita iure laborum libero magni nostrum odit
+            officiis porro quam, quasi sed. Earum ipsa laborum minima mollitia
+            officiis. Alias amet aspernatur eius fugiat maiores nesciunt
+            quisquam sed, sit! Adipisci atque in iure repellat vel!
+          </p>
+        </article>
+
+        <h1 id="el-box" class="el-box" data-tip="Hello element el-box !">
+          This is element id="el-box"
+        </h1>
+
+        <div class="border-1 p-2 mt-5">
+          Задача - при клике на элемент h1 с
+          <span class="px-3 py-1 bg-dark text-white"> id="el-box" </span>
+          над ним должна появиться подсказка - элемент DIV с классом
+          <span class="px-3 py-1 bg-dark text-white">class="tip"</span><br />
+          и содержимым которое указано в пользовательском аттрибуте
+          <span class="px-3 py-1 bg-dark text-white">data-tip</span> блока
+        </div>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi
+          aspernatur, beatae delectus dicta dolore ea eius ex exercitationem,
+          expedita labore minus non nulla odio optio porro qui quidem repellat,
+          sint sunt suscipit vel velit voluptates. Amet commodi laboriosam
+          voluptatibus?
+        </p>
+      </div>
+      <!-- /.container -->
+
+      <footer class="footer bg-info text-white py-3">
+        <p class="text-center">
+          &copy; <span id="footer-year"></span> Front end
+        </p>
+      </footer>
+    </div>
+    <!-- /.wrap -->
+    <script src="js/example_1.js"></script>
+    <script>
+      document.getElementById(
+        "footer-year"
+      ).innerHTML = new Date().getFullYear();
+    </script>
+  </body>
+</html>

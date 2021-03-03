@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Metrics lab</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="_/css/bootstrap.min.css">
+    <link rel="stylesheet" href="_/css/style.css">
+
+</head>
+<body class="metrics-page-body">
+<div class="container">
+        <div class="content">
+            <div class="info-box">
+             <div class="checkbox-inline info-box__item">
+                    <input type="checkbox" id="contentbox">
+                    <label for="contentbox" class="label-info">box-sizing: <span>border-box</span></label>
+                </div>
+             </div><!-- /.info-box-->
+        </div>
+        <section id="section-element" class="section p-3">
+            <h3 class="info-box__left text-error">Ширина/высота видимой области окна.</h3>
+            <p class="section__item">
+                Метод <b class="click-info" id="deClientW">document.documentElement.clientWidth <span></span></b>
+                Метод <b class="click-info" id="deClientH">document.documentElement.clientHeight <span></span></b><br>
+            </p>
+            <p class="section__item">
+                Метод <b class="click-info" id="de-inner-w">window.innerWidth <span></span></b>
+                Метод <b class="click-info" id="de-inner-h">window.innerHeight <span></span></b><br>
+            </p>
+            <p class="section__item">
+                Свойства <b>clientWidth / Height</b> возвращают ширина / высота минус  ширина полосы прокрутки<br>
+                <b>window.innerWidth / Height</b>  игнорируют наличие полосы прокрутки
+            </p>
+            <hr>
+
+            <h3 class="info-box__left text-error">Координаты блока относительно области просмотра браузера</h3>
+            <div id="get-bounding" class="get-bounding bg-info text-white"></div>
+            <p class="section__item">
+                Метод <b  class="click-info" id="get-bounding-info">getBoundingClientRect()</b>  позволяет получить координаты блока.
+                <br>Значения <b class="text-danger">top</b> и <b class="text-danger">left</b>  - относительно верхнего левого угла порта просмотра. !!!
+
+            </p>
+            <hr>
+            <p class="section__item">
+                Для получения координат элемента относительно <b>страницы</b> нужно к координатам относительно окна добавить текущую прокрутку. Это свойства
+                <b class="click-info" id="page-y-offset-info">window.pageYOffset  <span></span></b>
+                <b class="click-info" id="page-x-offset-info">window.pageXOffset  <span></span></b>
+           </p>
+            <p class="section__item">
+                Как правило пишут такую  функцию
+            <div>
+ <pre>
+    <code>
+        function getCoords(el) {
+            const box = el.getBoundingClientRect();
+            const top = box.top + (window.pageYOffset || document.documentElement.scrollTop);
+            const left = box.left + (window.pageXOffset || document.documentElement.scrollLeft );
+            return {
+                top: Math.round(top),
+                left: Math.round(left)
+            }
+        }
+    </code>
+</pre>
+        </div>
+             <div class="pt-3">
+                 <div id="test-coords-el" class="bg-info text-white text-center test-coords-el"></div>
+                <b class="click-info" id="get-coords-element">Выполнить getCoords - расчитать координаты нижнего прямоугольника</b>
+            </div>
+
+
+            <h3 class="info-box__left text-error pt-3">Установить прокрутку можно при помощи специальных методов</h3>
+            <div class="section__item">
+                <p>
+                     Например прокрутить страницу на 250px от верхнего края документа
+                    <b class="click-info" id="sc-de-to">document.documentElement.scrollTop = 250</b>
+                </p>
+               <p>
+                   <b>window.scrollTo(pageX,pageY) – абсолютные координаты</b><br>
+                    Например прокрутить страницу на 100px от верхнего края документа
+                    <b class="click-info" id="sc-to">window.srollTo(0, 100)</b>
+                </p>
+                <p>
+                    <b>window.scrollBy(x,y) – прокрутить относительно текущего места.</b><br>
+                    Например прокрутить страницу на 50px от текущего места вниз<br>
+                    <b class="click-info" id="sc-by">window.scrollBy(0, 50)</b>
+
+                </p>
+
+            </div>
+
+        </section>
+</div>
+
+
+
+<script src="js/script.js"></script>
+<script src="js/metrics_page.js"></script>
+</body>
+</html>

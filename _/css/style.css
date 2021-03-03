@@ -1,0 +1,70 @@
+.codebox {
+    font-size: 1.3rem;
+    font-family: monospace !important;
+}
+
+.nested-group__item {
+    color: lightseagreen;
+}
+.red {
+    color: darkred;
+}
+
+.bg-gray {
+    background: #e2e2e2;
+}
+.is-bordered {
+    border: 3px solid navy;
+}
+.is-hovered {
+    cursor: pointer;
+}
+
+.test-el {
+    background: #e2e2e2;
+    border: 1px dotted navy;
+    margin-bottom: .6rem;
+    text-align: center;
+    padding: 0.6rem  0;
+    cursor: pointer;
+}
+.article-box {
+    border: 1px solid gray;
+    padding: 2rem 1rem;
+}
+.article-box h2 {
+    border: 1px solid rebeccapurple;
+}
+.article-box p{
+    padding: 1rem;
+}
+
+.article-box p:nth-of-type(1) {
+    border: 1px solid lightblue;
+}
+
+.article-box p:nth-of-type(2) {
+    border: 1px solid lightcoral;
+}
+
+blockquote.co {
+    background: #e3e3e3;
+    float: right;
+    width: 25%;
+    font-size: 1.5rem;
+   padding: 5px;
+    text-align:center;
+}
+
+#from, #to { border:1px solid red; padding:5px 0;}
+#from p, #to p { display:inline-block;  margin:0 5px; padding: 20px 30px;
+    text-align:center; font-size:30px;}
+.f5,.f6,.f7,.f8  {background:#c1fac5;}
+.f1,.f2,.f3,.f4  {background:#f7fac1;}
+
+
+
+.list-flex {
+    display: flex;
+    justify-content: space-between;
+}

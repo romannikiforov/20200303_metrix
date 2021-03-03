@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+ <head>
+    <title>JavaScript - metrics.html</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="_/css/bootstrap.min.css">
+     <link rel="stylesheet" href="_/css/style.css">
+     <style></style>
+   </head>
+<body>
+<div class="container">
+     <div class="row">
+        <div class="col-md-8 outer-col">
+            <div class="info-checkbox">
+                <div class="checkbox-inline">
+                    <input type="checkbox" id="contentbox">
+                    <label for="contentbox" class="label-info">box-sizing: <span>border-box</span></label>
+                </div>
+                 <div class="checkbox-inline">
+                    <input type="checkbox" id="ovf">
+                     <label for="ovf" class="label-info">overflow: <span>hidden</span></label>
+                </div>
+            </div><!--/.info-checkbox -->
+                width: 600px; height:300px;  padding: 20px; border: 20px
+              <div id="testel" class="el">
+                <ul>
+                    <li class="mb-3">
+                        У элемента есть 2 области: <br>
+                        <ul>
+                            <li>клиентская  -> content  + paddings - (<span class="text-danger font-weight-bold">clientWidth, clientHeight</span>)</li>
+                            <li>весь box -> content  + paddings + border - (<span class="text-danger font-weight-bold">offsetWidth, offsetHeight</span>)</li>
+                        </ul>
+                        <span class="font-italic text-danger">Полоса прокрутки oтъедает часть ширины элемента</span>
+                    </li>
+                    <hr>
+                    <li class="mb-3">
+                        отступ клиентской области от внешних границ элемента<br>
+                        (<span class="text-danger font-weight-bold">clientLeft, clientTop</span>) (по сути это ширина border)
+                    </li>
+                    <hr>
+                    <li class="mb-3">
+                        ширина и высота элемента c учетом прокрутки  (<span class="text-danger font-weight-bold">scrollWidth, scrollHeight</span>)
+                    </li>
+                    <hr>
+                    <li class="mb-3">на сколько прокрутили элемент - (<span class="text-danger font-weight-bold">scrollTop, scrollLeft</span>)
+                        <br> В scrollTop и scrollLeft можно присваивать значения
+                    </li>
+                    <hr>
+                    <li class="mb-3">
+                        <ul>
+                            <li>координаты <span class="text-danger font-weight-bold">offsetTop, offsetLeft</span> отсчитываюся  относительно ближайшего родителя у которого свойство position != static или относительно body если такого родителя нет</li>
+                            <li> <span class="text-danger font-weight-bold">offsetParent</span> содержит cсылку на родительский элемент  </li>
+                        </ul>
+                    </li>
+                    <hr>
+                    <li>
+                        <ul>
+                            <li>Размеры элементы автоматически обнуляются если ему присвоить <b>display:none</b></li>
+                            <li>А при <b>visibility: hidden</b> размеры элемента сохраняются</li>
+                        </ul>
+                    </li>
+                </ul>
+                <hr>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet aperiam, asperiores assumenda beatae deleniti dolores doloribus eum exercitationem hic incidunt magni minus officiis reiciendis rerum saepe suscipit, tempora temporibus.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet aperiam, asperiores assumenda beatae deleniti dolores doloribus eum exercitationem hic incidunt magni minus officiis reiciendis rerum saepe suscipit, tempora temporibus.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet aperiam, asperiores assumenda beatae deleniti dolores doloribus eum exercitationem hic incidunt magni minus officiis reiciendis rerum saepe suscipit, tempora temporibus.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet aperiam, asperiores assumenda beatae deleniti dolores doloribus eum exercitationem hic incidunt magni minus officiis reiciendis rerum saepe suscipit, tempora temporibus.</p>
+            </div>
+
+        </div>
+        <div class="col-md-4">
+            <div>
+                <input class="btn btn-primary" value="Sroll Element" id="scrollBtn">
+                <input class="btn btn-success" value="Stop Sroll Element" id="stopScrollBtn">
+            </div>
+            <br>
+            <div id="res-metrics" class="mb-5" style="font-size:20px;">
+                <div data-action="clientWidth"  id="clientWidth">clientWidth = <span></span></div>
+                <div data-action="clientHeight"  id="clientHeight">clientHeight = <span></span></div>
+                <div data-action="clientTop"  id="clientTop">clientTop = <span></span></div>
+                <div data-action="clientLeft"  id="clientLeft">clientLeft = <span></span></div>
+                <div data-action="offsetWidth"  id="offsetWidth">offsetWidth = <span></span></div>
+                <div data-action="offsetHeight"  id="offsetHeight">offsetHeight = <span></span></div>
+                <div data-action="scrollWidth"  id="scrollWidth">scrollWidth = <span></span></div>
+                <div data-action="scrollHeight"  id="scrollHeight">scrollHeight = <span></span></div>
+                <div data-action="scrollTop"  id="scrollTop">scrollTop = <span></span></div>
+                <div data-action="scrollLeft"  id="scrollLeft">scrollLeft = <span></span></div>
+                <div data-action="offsetParent"  id="offsetParent">offsetParent = <span></span></div>
+                <div data-action="offsetLeft"  id="offsetLeft">offsetLeft = <span></span></div>
+                <div data-action="offsetTop"  id="offsetTop">offsetTop = <span></span></div>
+            </div>
+            <button id="reset-out" class="btn btn-danger">Reset</button>
+
+        </div>
+    </div>
+
+
+
+</div> <!-- /.container -->
+<script src="js/script.js"></script>
+<script src="js/metrics.js"></script>
+
+</body>
+</html>

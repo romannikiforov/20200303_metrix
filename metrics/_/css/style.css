@@ -1,0 +1,128 @@
+body{ padding-top:10px;}
+
+.bs {
+    box-sizing: border-box;
+}
+#wrap{
+	min-width:300px;
+}
+#error{
+	color:red;
+	text-align:center;
+	font:18px arial;
+}
+.hide{display:hidden;}
+.show{display:block;}
+.agree {color:red; font-weight:bold;}
+ .courses label {
+	display:block; overflow:hideen;
+ }
+ .courses label span{
+	float:left;
+	width:10%;
+	text-align:right;
+ }
+.courses label  input{
+	margin-left:20px;
+
+}
+.btn {
+	margin-bottom: 1em;
+}
+.outer-col {
+	border: 1px solid green;
+}
+.el {
+     box-sizing: content-box;
+     width: 600px;
+     height:300px;
+     padding: 20px;
+     margin: 20px;
+     border: 20px solid #ff00cc;
+     overflow-y: scroll;
+ }
+.el ul {
+    margin:0;
+    padding:0;
+}
+
+pre {
+ padding: 10px;
+ font: bold 16px arial;
+ display:inline-block;
+}
+.win {
+    width: 300px;
+    height:300px;
+    position:absolute;
+    right: 10px; top:40px;
+    border: 1px solid green;
+    padding: 3px;
+    border-radius: 6px;
+}
+.win__head:hover {cursor: move}
+.win__head {
+    padding: 10px 0;
+    background: lightblue;
+    text-align: center;
+}
+.win__body {padding: 10px}
+
+.info-checkbox {
+    display: flex;
+}
+.label-info {
+    font-weight: bold;
+}
+.label-info span {
+    color: orangered;
+}
+
+.checkbox-inline {
+    margin-right: 2rem;
+
+}
+
+#section { background:#e2e2e2; padding:14px 0; }
+.section { background: #e1e1e1; }
+
+.metrics-page-body {
+    min-height: 2000px;
+}
+
+.click-info { color: orangered; cursor:pointer; margin-right: 2rem;}
+
+.info-box {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    margin-bottom: 8px;
+ }
+.info-box__item {
+    flex: 1;
+    margin-right: 3rem;
+    padding-right: 3rem;
+    border-right: 1px solid gray;
+}
+.info-box__item:last-of-type {
+    border-right: 0;
+}
+pre {
+    padding:0 1rem;
+    margin:0;
+    background: lightgoldenrodyellow;
+}
+
+.draggable{position:absolute; cursor:move;}
+.box{width:100px; height:100px;}
+.green{background:green;}.navy{background:navy;}
+
+
+.get-bounding {
+    height: 100px;
+    margin: 1rem 0;
+    padding: 1rem;
+}
+.test-coords-el {
+    height: 100px;
+}

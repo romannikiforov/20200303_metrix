@@ -1,0 +1,16 @@
+{
+  "name": "metrix_webinar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "browser-sync start -s -w -f=\"./index.html\" --no-notify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^4.0.1",
+    "livereloadx": "^0.3.10"
+  }
+}
